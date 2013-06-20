@@ -2,7 +2,7 @@ This is a pygments lexer for pry sessions.
 
 ### Installation
 
-`pip install pry_lexer`
+`pip install pry-lexer`
 
 ### Usage
 
