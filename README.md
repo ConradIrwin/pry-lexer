@@ -1,18 +1,37 @@
 This is a pygments lexer for pry sessions.
 
-Installation
-============
+### Installation
 
 `pip install pry_lexer`
 
-Usage
-=====
+### Usage
 
-First copy-paste from your terminal into a file called `session.pry` (or anything that ends in `.pry`). Then run:
+Copy your pry session into your clipboard, then pygmentize it:
 
 ```
-pygmentize -l pry session.pry
+pygmentize <(xclip -o)  # linux
+pygmentize <(pbpaste)   # mac
 ```
+
+Or use a file called `*.pry`:
+
+```
+pygmentize session.pry
+```
+
+If it's not working, try specifying `pygmentize -l pry`, but that shouldn't be needed.
+
+### Why?
+
+Because I'm fed up of people syntax highlighting pry sessions as though they were ruby. 
+
+#### Wrong:
+
+![Alt text](http://jelzo.com/stuff/pry-before.png)
+
+#### Right:
+
+![Alt text](http://jelzo.com/stuff/pry-after.png)
 
 Meta-fu
 =======
